@@ -39,7 +39,7 @@ public class TestFileSize {
                 
                 	for (int i=0; i<filenames.length; i++) {
 
-                    	String filename = filenames[i];
+                    	//String filename = filenames[i];
                         //System.out.println("filename: " + filename);
                     }
                 }
@@ -59,7 +59,7 @@ public class TestFileSize {
                 
                 	for (int i=0; i<filenames.length; i++) {
 
-                    	String filename = filenames[i];
+                    	//String filename = filenames[i];
                         //System.out.println("filename: " + filename);
                     }
                 }
@@ -81,7 +81,7 @@ public class TestFileSize {
                     for (int i=0; i<directories.length; i++) {
 
                     	// Get filename of file or directory
-                        String subDirectory = directories[i].getName();
+                        //String subDirectory = directories[i].getName();
                         //System.out.println("directory: " + subDirectory);
                     }
                 }
@@ -103,7 +103,7 @@ public class TestFileSize {
                     for (int i=0; i<files.length; i++) {
 
                     	// Get filename of file or directory
-                        String file = files[i].getName();
+                        //String file = files[i].getName();
                         //System.out.println("filename: " + file + " : " + FileUtil.roundObjectSize(files[i].length()));
                     }
                 }

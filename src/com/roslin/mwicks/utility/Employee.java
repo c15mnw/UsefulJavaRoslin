@@ -33,6 +33,7 @@ package com.roslin.mwicks.utility;
 import java.io.Serializable;
 
 
+@SuppressWarnings("serial")
 public class Employee implements Serializable {
 
 	public String name;

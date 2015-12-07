@@ -1,8 +1,6 @@
 package com.roslin.mwicks.testutility;
 
 import com.roslin.mwicks.utility.GeneratePassword;
-import com.roslin.mwicks.utility.GenerateRandom;
-import com.roslin.mwicks.utility.GenerateRandomStuff;
 import com.roslin.mwicks.utility.Wrapper;
 
 

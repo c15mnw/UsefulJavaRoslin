@@ -4,8 +4,8 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.Writer;
 
-import java.net.URL;
-import java.net.URLClassLoader;
+//import java.net.URL;
+//import java.net.URLClassLoader;
 
 import javax.tools.JavaCompiler;
 import javax.tools.ToolProvider;
@@ -24,7 +24,7 @@ public class TestClassLoader {
 	    JavaCompiler compiler = ToolProvider.getSystemJavaCompiler();
 	    compiler.run(null, null, null, sourceFile.getPath());
 
-	    URLClassLoader classLoader = URLClassLoader.newInstance(new URL[] { root.toURI().toURL() });
-	    Class<?> cls = Class.forName("Test", true, classLoader);
+	    //URLClassLoader classLoader = URLClassLoader.newInstance(new URL[] { root.toURI().toURL() });
+	    //Class<?> cls = Class.forName("Test", true, classLoader);
 	}
 }

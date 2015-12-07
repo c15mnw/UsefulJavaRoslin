@@ -28,7 +28,7 @@ public class TestExecuteCommand {
 
           		String result = iteratorresults.next();
 
-           		//System.out.println("         " + result.toString());
+           		System.out.println("         " + result.toString());
           	}
     		
             Wrapper.printEpilogue("*", Wrapper.getExecutingClass(), startTime);

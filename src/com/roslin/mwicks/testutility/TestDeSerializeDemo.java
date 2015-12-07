@@ -1,26 +1,24 @@
 package com.roslin.mwicks.testutility;
 
 import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
 
-import com.roslin.mwicks.utility.Employee;
+//import com.roslin.mwicks.utility.Employee;
 
 public class TestDeSerializeDemo {
 
 	
 	public static void main(String... args) throws Exception {
 
-		Employee e = null;
+		//Employee e = null;
 	    
 		try{
 	       
 			FileInputStream fileIn = new FileInputStream("/Users/mwicks/Desktop/employee.ser");
 			ObjectInputStream in = new ObjectInputStream(fileIn);
 
-			e = (Employee) in.readObject();
+			//e = (Employee) in.readObject();
 			
 			in.close();
 			fileIn.close();
@@ -33,6 +31,7 @@ public class TestDeSerializeDemo {
 			i.printStackTrace();
 			return;
 		}
+		/*
 		catch(ClassNotFoundException c) {
 	         
 			//System.out.println("Employee class not found");
@@ -40,7 +39,7 @@ public class TestDeSerializeDemo {
 			c.printStackTrace();
 			return;
 	      
-		}
+		}*/
 
 		//System.out.println("\nA Deserialized Employee...");
 		//System.out.println(e.toString());

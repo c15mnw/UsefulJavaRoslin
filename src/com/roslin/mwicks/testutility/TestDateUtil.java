@@ -1,6 +1,6 @@
 package com.roslin.mwicks.testutility;
 
-import java.text.SimpleDateFormat;
+//import java.text.SimpleDateFormat;
 
 import java.util.Date;
 
@@ -31,10 +31,13 @@ public class TestDateUtil {
             String dateString10 = "29-02-2012 12:00";
             String dateString11 = "2012-02-29 12:00";
             String dateString12 = "02/29/2012 12:00";
+            /*
             String dateString13 = "2012/02/29 12:00";
             String dateString14 = "29 Feb 2012 12:00";
             String dateString15 = "29 February 2012 12:00";
             String dateString16 = "20120229120055";
+            */
+            /*
             String dateString17 = "20120229 120055";
             String dateString18 = "29-02-2012 12:00:55";
             String dateString19 = "2012-02-29 12:00:55";
@@ -42,10 +45,12 @@ public class TestDateUtil {
             String dateString21 = "2012/02/29 12:00:55";
             String dateString22 = "29 Feb 2012 12:00:55";
             String dateString23 = "29 February 2012 12:00:55";
+            */
 
             //System.out.println("");
             //System.out.println("Set Up Date Formats");
             //System.out.println("-------------------");
+            /*
     	   	SimpleDateFormat format1 = new SimpleDateFormat("yyyyMMdd");
             SimpleDateFormat format2 = new SimpleDateFormat("dd-MM-yyyy");
             SimpleDateFormat format3 = new SimpleDateFormat("yyyy-MM-dd");
@@ -69,10 +74,12 @@ public class TestDateUtil {
             SimpleDateFormat format21 = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
             SimpleDateFormat format22 = new SimpleDateFormat("dd MMM yyyy HH:mm:ss");
             SimpleDateFormat format23 = new SimpleDateFormat("dd MMMM yyyy HH:mm:ss");
+            */
 
             //System.out.println("");
             //System.out.println("Parse Date Strings Using Date Formats");
             //System.out.println("-------------------------------------");
+            /*
             Date parsed1 = format1.parse(dateString1);
     	   	Date parsed2 = format2.parse(dateString2);
     	   	Date parsed3 = format3.parse(dateString3);
@@ -96,6 +103,7 @@ public class TestDateUtil {
     	   	Date parsed21 = format21.parse(dateString21);
     	   	Date parsed22 = format22.parse(dateString22);
     	   	Date parsed23 = format23.parse(dateString23);
+    	   	*/
 
             //System.out.println("");
             //System.out.println("Print Out Date Strings Parsed Using Date Formats");
@@ -139,10 +147,13 @@ public class TestDateUtil {
             Date date10 = DateUtil.parse(dateString10);
             Date date11 = DateUtil.parse(dateString11);
             Date date12 = DateUtil.parse(dateString12);
+            /*
             Date date13 = DateUtil.parse(dateString13);
             Date date14 = DateUtil.parse(dateString14);
             Date date15 = DateUtil.parse(dateString15);
             Date date16 = DateUtil.parse(dateString16);
+            */
+            /*
             Date date17 = DateUtil.parse(dateString17);
             Date date18 = DateUtil.parse(dateString18);
             Date date19 = DateUtil.parse(dateString19);
@@ -150,6 +161,7 @@ public class TestDateUtil {
             Date date21 = DateUtil.parse(dateString21);
             Date date22 = DateUtil.parse(dateString22);
             Date date23 = DateUtil.parse(dateString23);
+            */
 
             //System.out.println("");
             //System.out.println("Print Out Date Strings Parsed Using DateUtil package");
@@ -193,10 +205,13 @@ public class TestDateUtil {
             Calendar calendar10 = DateUtil.toCalendar(date10);
             Calendar calendar11 = DateUtil.toCalendar(date11);
             Calendar calendar12 = DateUtil.toCalendar(date12);
+            /*
             Calendar calendar13 = DateUtil.toCalendar(date13);
             Calendar calendar14 = DateUtil.toCalendar(date14);
             Calendar calendar15 = DateUtil.toCalendar(date15);
             Calendar calendar16 = DateUtil.toCalendar(date16);
+            */
+            /*
             Calendar calendar17 = DateUtil.toCalendar(date17);
             Calendar calendar18 = DateUtil.toCalendar(date18);
             Calendar calendar19 = DateUtil.toCalendar(date19);
@@ -204,6 +219,7 @@ public class TestDateUtil {
             Calendar calendar21 = DateUtil.toCalendar(date21);
             Calendar calendar22 = DateUtil.toCalendar(date22);
             Calendar calendar23 = DateUtil.toCalendar(date23);
+            */
 
             //System.out.println("");
             //System.out.println("Print Out Converted Calendars");
@@ -235,6 +251,7 @@ public class TestDateUtil {
             //System.out.println("");
             //System.out.println("Date Arithmetic using DateUtil package");
             //System.out.println("--------------------------------------");
+            /*
             Date date24 = DateUtil.addYears(date1, 1);
             Date date25 = DateUtil.addMonths(date2, 1); 
             Date date26 = DateUtil.addDays(date3, 1); 
@@ -242,6 +259,7 @@ public class TestDateUtil {
             Date date28 = DateUtil.addMinutes(date5, 1);
             Date date29 = DateUtil.addSeconds(date6, 1); 
             Date date30 = DateUtil.addMillis(date7, 1);
+            */
             
             //System.out.println("date24.toString() " + date24.toString());
             //System.out.println("date25.toString() " + date25.toString());
@@ -251,6 +269,7 @@ public class TestDateUtil {
             //System.out.println("date29.toString() " + date29.toString());
             //System.out.println("date30.toString() " + date30.toString());
             
+            /*
             Calendar calendar24 = DateUtil.toCalendar(date24);
             Calendar calendar25 = DateUtil.toCalendar(date25);
             Calendar calendar26 = DateUtil.toCalendar(date26);
@@ -258,6 +277,7 @@ public class TestDateUtil {
             Calendar calendar28 = DateUtil.toCalendar(date28);
             Calendar calendar29 = DateUtil.toCalendar(date29);
             Calendar calendar30 = DateUtil.toCalendar(date30);
+            */
 
             //System.out.println("calendar24.getTime() " + calendar24.getTime());
             //System.out.println("calendar25.getTime() " + calendar25.getTime());
@@ -441,6 +461,7 @@ public class TestDateUtil {
             //System.out.println("");
             //System.out.println("More Date Comparisons using DateUtil package");
             //System.out.println("--------------------------------------------");
+            /*
             int i1 = DateUtil.elapsedYears(date1, date2);
             int i2 = DateUtil.elapsedMonths(date3, date4);
             int i3 = DateUtil.elapsedDays(date5, date6);
@@ -449,6 +470,7 @@ public class TestDateUtil {
             int i6 = DateUtil.elapsedSeconds(date11, date12);
             long l1 = DateUtil.elapsedMillis(date13, date14);
             int[] intArray = DateUtil.elapsedTime(date15, date16);
+            */
 
             //System.out.println("DateUtil.elapsedYears(date1, date2) = " + i1 + " years");
             //System.out.println("DateUtil.elapsedMonths(date3, date4) = " + i2 + " months");
@@ -458,6 +480,7 @@ public class TestDateUtil {
             //System.out.println("DateUtil.elapsedSeconds(date11, date12) = " + i6 + " seconds");
             //System.out.println("DateUtil.elapsedMillis(date13, date14) = " + l1 + " milliseconds");
             
+            /*
             String appendStr = "";
             
             for (int i = 0; i < intArray.length; i++) {
@@ -469,10 +492,12 @@ public class TestDateUtil {
             	if (i == 5) { appendStr = " Seconds"; }
                 //System.out.println("DateUtil.elapsedTime(date15, date16) = " + intArray[i] + appendStr);
             }
+             */
             
             //System.out.println("");
             //System.out.println("More Calendar Comparisons using CalendarUtil package");
             //System.out.println("----------------------------------------------------");
+            /*
             int i7 = CalendarUtil.elapsedYears(calendar2, calendar1);
             int i8 = CalendarUtil.elapsedMonths(calendar4, calendar3);
             int i9 = CalendarUtil.elapsedDays(calendar6, calendar5);
@@ -481,6 +506,7 @@ public class TestDateUtil {
             int i12 = CalendarUtil.elapsedSeconds(calendar11, calendar12);
             long l2 = CalendarUtil.elapsedMillis(calendar13, calendar14);
             int[] intArray2 = CalendarUtil.elapsedTime(calendar15, calendar16);
+            */
 
             //System.out.println("CalendarUtil.elapsedYears(calendar2, calendar1) = " + i7 + " years");
             //System.out.println("CalendarUtil.elapsedMonths(calendar4, calendar3) = " + i8 + " months");
@@ -490,6 +516,7 @@ public class TestDateUtil {
             //System.out.println("CalendarUtil.elapsedSeconds(calendar11, calendar12) = " + i12 + " seconds");
             //System.out.println("CalendarUtil.elapsedMillis(calendar13, calendar14) = " + l2 + " milliseconds");
             
+            /*
             String appendStr2 = "";
             
             for (int i = 0; i < intArray2.length; i++) {
@@ -501,6 +528,7 @@ public class TestDateUtil {
             	if (i == 5) { appendStr2 = " Seconds"; }
                 //System.out.println("CalendarUtil.elapsedTime(calendar15, calendar16) = " + intArray2[i] + appendStr2);
             }
+             */
 
             Wrapper.printEpilogue("*", Wrapper.getExecutingClass(), startTime);
     	}

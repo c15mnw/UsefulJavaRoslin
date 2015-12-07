@@ -13,7 +13,7 @@ public class TestFactorial {
     		
             int input = ObjectConverter.convert(args[0], Integer.class);
             double result = Factorial.factorial(input);
-            //System.out.println(input + " Factorial is: " + result);
+            System.out.println(input + " Factorial is: " + result);
 
             Wrapper.printEpilogue("*", Wrapper.getExecutingClass(), startTime);
     	}

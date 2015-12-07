@@ -62,7 +62,8 @@ import java.util.TimeZone;
 public final class DateUtil {
 
     // Init ---------------------------------------------------------------------------------------
- 	private static final Map<String, String> DATE_FORMAT_REGEXPS = new HashMap<String, String>() {{
+ 	@SuppressWarnings("serial")
+	private static final Map<String, String> DATE_FORMAT_REGEXPS = new HashMap<String, String>() {{
         put("^\\d{8}$", "yyyyMMdd");
         put("^\\d{1,2}-\\d{1,2}-\\d{4}$", "dd-MM-yyyy");
         put("^\\d{4}-\\d{1,2}-\\d{1,2}$", "yyyy-MM-dd");
