@@ -8,6 +8,7 @@ import com.roslin.mwicks.utility.CalendarUtil;
 import com.roslin.mwicks.utility.DateUtil;
 import com.roslin.mwicks.utility.Wrapper;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class TestDateUtil {
@@ -50,8 +51,8 @@ public class TestDateUtil {
             //System.out.println("");
             //System.out.println("Set Up Date Formats");
             //System.out.println("-------------------");
-            /*
     	   	SimpleDateFormat format1 = new SimpleDateFormat("yyyyMMdd");
+            /*
             SimpleDateFormat format2 = new SimpleDateFormat("dd-MM-yyyy");
             SimpleDateFormat format3 = new SimpleDateFormat("yyyy-MM-dd");
             SimpleDateFormat format4 = new SimpleDateFormat("MM/dd/yyyy");
@@ -79,8 +80,8 @@ public class TestDateUtil {
             //System.out.println("");
             //System.out.println("Parse Date Strings Using Date Formats");
             //System.out.println("-------------------------------------");
-            /*
             Date parsed1 = format1.parse(dateString1);
+            /*
     	   	Date parsed2 = format2.parse(dateString2);
     	   	Date parsed3 = format3.parse(dateString3);
     	   	Date parsed4 = format4.parse(dateString4);
@@ -108,7 +109,7 @@ public class TestDateUtil {
             //System.out.println("");
             //System.out.println("Print Out Date Strings Parsed Using Date Formats");
             //System.out.println("------------------------------------------------");
-            //System.out.println("format1.parse(dateString1)   " + parsed1.toString());
+            System.out.println("format1.parse(dateString1)   " + parsed1.toString());
             //System.out.println("format2.parse(dateString2)   " + parsed2.toString());
             //System.out.println("format3.parse(dateString3)   " + parsed3.toString());
             //System.out.println("format4.parse(dateString4)   " + parsed4.toString());
@@ -193,6 +194,9 @@ public class TestDateUtil {
             //System.out.println("");
             //System.out.println("Convert Dates to Calendars using DateUtil package");
             //System.out.println("-------------------------------------------------");
+            Calendar calendar1 = Calendar.getInstance();
+            format1.format(calendar1.getTime());
+            /*
             Calendar calendar1 = DateUtil.toCalendar(date1);
             Calendar calendar2 = DateUtil.toCalendar(date2); 
             Calendar calendar3 = DateUtil.toCalendar(date3); 
@@ -205,6 +209,7 @@ public class TestDateUtil {
             Calendar calendar10 = DateUtil.toCalendar(date10);
             Calendar calendar11 = DateUtil.toCalendar(date11);
             Calendar calendar12 = DateUtil.toCalendar(date12);
+             */
             /*
             Calendar calendar13 = DateUtil.toCalendar(date13);
             Calendar calendar14 = DateUtil.toCalendar(date14);
@@ -224,7 +229,7 @@ public class TestDateUtil {
             //System.out.println("");
             //System.out.println("Print Out Converted Calendars");
             //System.out.println("-----------------------------");
-            //System.out.println("calendar1.getTime()  " + calendar1.getTime());
+            System.out.println("format1.format(calendar1.getTime()) : " + format1.format(calendar1.getTime()));
             //System.out.println("calendar2.getTime()  " + calendar2.getTime());
             //System.out.println("calendar3.getTime()  " + calendar3.getTime());
             //System.out.println("calendar4.getTime()  " + calendar4.getTime());
@@ -290,6 +295,7 @@ public class TestDateUtil {
             //System.out.println("");
             //System.out.println("Calendar Arithmetic using CalendarUtil package");
             //System.out.println("----------------------------------------------");
+            /*
             CalendarUtil.addYears(calendar1, 1);
             CalendarUtil.addMonths(calendar2, 1); 
             CalendarUtil.addDays(calendar3, 1); 
@@ -297,6 +303,7 @@ public class TestDateUtil {
             CalendarUtil.addMinutes(calendar5, 1);
             CalendarUtil.addSeconds(calendar6, 1); 
             CalendarUtil.addMillis(calendar7, 1);
+             */
 
             //System.out.println("calendar1.getTime() " + calendar1.getTime());
             //System.out.println("calendar2.getTime() " + calendar2.getTime());
@@ -385,6 +392,7 @@ public class TestDateUtil {
             //System.out.println("");
             //System.out.println("Calendar Comparison using CalendarUtil package");
             //System.out.println("----------------------------------------------");
+            /*
             boolean b7 = CalendarUtil.sameYear(calendar1, calendar2);
             boolean b8 = CalendarUtil.sameMonth(calendar3, calendar4);
             boolean b9 = CalendarUtil.sameDay(calendar5, calendar6);
@@ -457,6 +465,8 @@ public class TestDateUtil {
                 //System.out.println("calendar11  " + calendar11.get(Calendar.SECOND));
                 //System.out.println("calendar12  " + calendar12.get(Calendar.SECOND));
             }
+            */
+
 
             //System.out.println("");
             //System.out.println("More Date Comparisons using DateUtil package");
