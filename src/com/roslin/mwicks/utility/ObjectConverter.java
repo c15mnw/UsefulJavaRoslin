@@ -240,6 +240,26 @@ public final class ObjectConverter {
 
     // You can implement more converter methods here.
     /*
+     * Converts Double to String.
+     * @param value The Double to be converted.
+     * @return The converted String value.
+     */
+    public static String doubleToString(Double value) {
+
+    	return value.toString();
+    }
+
+    /*
+     * Converts String to Double.
+     * @param value The String to be converted.
+     * @return The converted Double value.
+     */
+    public static Double stringToDouble(String value) {
+        
+    	return Double.valueOf(value);
+    }
+
+    /*
      * Converts Long to String.
      * @param value The Long to be converted.
      * @return The converted String value.

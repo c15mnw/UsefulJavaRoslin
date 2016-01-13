@@ -25,6 +25,8 @@ public class TestObjectConverter {
              * 10. stringToLong
              * 11. longToInteger
              * 12. integerToLong
+             * 13. doubleToString
+             * 14. stringToDouble
              */
 
             //Object o1 = new Integer(0);
@@ -59,8 +61,7 @@ public class TestObjectConverter {
             String o8_string = "true";
     		boolean b2;
             
-    		//Object o9 = new Long(2000);
-            //Long o9_long = new Long(2000);
+            //long o9_long = new Long(2000);
             long o9_long = 2000;
     		String s3;
             
@@ -75,7 +76,16 @@ public class TestObjectConverter {
     		//Object o12 = new Integer(4000);
             int o12_integer = 4000;
     		long l2;
+
+            //double o13_double = new Double(-3.141);
+            double o13_double = -3.141;
+    		String s4;
             
+    		//Object o14 = "-3.333";
+            String o14_string = "-3.333";
+    		double d2;
+
+    		
             // 1.  integerToBoolean
     		System.out.println("1.  integerToBoolean");
     		System.out.println("Integer " + o1_integer);
@@ -147,6 +157,18 @@ public class TestObjectConverter {
     		System.out.println("Integer " + o12_integer);
     		l2 = ObjectConverter.convert(o12_integer, Long.class);
     		System.out.println("Long " + l2);
+
+            // 13.  doubleToString
+    		System.out.println("9.  doubleToString");
+    		System.out.println("Double " + o13_double);
+    		s4 = ObjectConverter.convert(o13_double, String.class);
+    		System.out.println("String " + s4);
+
+    		// 14. stringToDouble
+    		System.out.println("10. stringToDouble");
+    		System.out.println("String " + o14_string);
+    		d2 = ObjectConverter.convert(o14_string, Double.class);
+    		System.out.println("Double " + d2);
 
             Wrapper.printEpilogue("*", Wrapper.getExecutingClass(), startTime);
     	}
