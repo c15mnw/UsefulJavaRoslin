@@ -203,6 +203,35 @@ public class TestDateUtil {
             System.out.println("format23.parse(dateString23) = " + parsed23.toString());
 
             System.out.println("");
+            System.out.println("Print Out Date Strings Parsed Using OTHER Date Formats");
+            System.out.println("------------------------------------------------------");
+            
+            System.out.println("format1.format(parsed23)  = " + format1.format(parsed23));
+            System.out.println("format2.format(parsed22)  = " + format2.format(parsed22));
+            System.out.println("format3.format(parsed21)  = " + format3.format(parsed21));
+            System.out.println("format4.format(parsed20)  = " + format4.format(parsed20));
+            System.out.println("format5.format(parsed19)  = " + format5.format(parsed19));
+            System.out.println("format6.format(parsed18)  = " + format6.format(parsed18));
+            System.out.println("format7.format(parsed17)  = " + format7.format(parsed17));
+            System.out.println("format8.format(parsed16)  = " + format8.format(parsed16));
+            System.out.println("format9.format(parsed15)  = " + format9.format(parsed15));
+            System.out.println("format10.format(parsed14) = " + format10.format(parsed4));
+            System.out.println("format11.format(parsed13) = " + format11.format(parsed13));
+            System.out.println("format12.format(parsed12) = " + format12.format(parsed12));
+            System.out.println("format13.format(parsed11) = " + format13.format(parsed11));
+            System.out.println("format14.format(parsed10) = " + format14.format(parsed10));
+            System.out.println("format15.format(parsed9)  = " + format15.format(parsed9));
+            System.out.println("format16.format(parsed8)  = " + format16.format(parsed8));
+            System.out.println("format17.format(parsed7)  = " + format17.format(parsed7));
+            System.out.println("format18.format(parsed6)  = " + format18.format(parsed6));
+            System.out.println("format19.format(parsed5)  = " + format19.format(parsed5));
+            System.out.println("format20.format(parsed4)  = " + format20.format(parsed4));
+            System.out.println("format21.format(parsed3)  = " + format21.format(parsed3));
+            System.out.println("format22.format(parsed2)  = " + format22.format(parsed2));
+            System.out.println("format23.format(parsed1)  = " + format23.format(parsed1));
+
+
+            System.out.println("");
             System.out.println("Parse Date Strings Using DateUtil package");
             System.out.println("-----------------------------------------");
             

@@ -80,7 +80,9 @@ package com.roslin.mwicks.utility;
 import java.lang.reflect.Method;
 
 import java.math.BigDecimal;
-
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -277,6 +279,42 @@ public final class ObjectConverter {
     public static Long stringToLong(String value) {
         
     	return Long.valueOf(value);
+    }
+
+    /*
+     * Converts Date to String into format "yyyy-MM-dd HH:mm:ss" ONLY
+     * @param value The Date to be converted.
+     * @return The converted String value.
+     */
+    public static String dateToString(Date value) {
+        
+    	String formatString = "yyyy-MM-dd HH:mm:ss";
+    	SimpleDateFormat format = new SimpleDateFormat(formatString);
+
+    	return format.format(value);
+    }
+
+    /*
+     * Converts String to Date from format "yyyy-MM-dd HH:mm:ss" ONLY
+     * @param value The String to be converted.
+     * @return The converted Date value.
+     */
+    public static Date stringToDate(String value) {
+    	
+    	String formatString = "yyyy-MM-dd HH:mm:ss";
+    	SimpleDateFormat format = new SimpleDateFormat(formatString);
+    	Date parsed = null;
+    	
+		try {
+		
+			parsed = format.parse(value);
+		} 
+		catch (ParseException e) {
+
+			e.printStackTrace();
+		}
+    	
+    	return parsed;
     }
 
     /*
