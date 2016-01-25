@@ -35,18 +35,21 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class MySQLDateTime{  
+	
+    // Constants ----------------------------------------------------------------------------------
+	protected static final String MYSQL_FORMAT = "yyyy-MM-dd HH:mm:ss";
 
     public static String now() {
 	    
     	Date dt = new Date();
-    	SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss");
+    	SimpleDateFormat sdf = new SimpleDateFormat(MYSQL_FORMAT);
     	
     	return sdf.format(dt);
 	}
 
     public static String formatDate(Date dt) {
 	    
-    	SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss");
+    	SimpleDateFormat sdf = new SimpleDateFormat(MYSQL_FORMAT);
     	
     	return sdf.format(dt);
 	}

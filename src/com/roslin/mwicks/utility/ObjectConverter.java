@@ -80,14 +80,45 @@ package com.roslin.mwicks.utility;
 import java.lang.reflect.Method;
 
 import java.math.BigDecimal;
+import java.math.BigInteger;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
 public final class ObjectConverter {
 
+	/*
+	 * List of Possible Convertors:
+	 * 
+	 * bigDecimalToDouble
+	 * bigDecimalToInteger
+	 * 
+	 * booleanToInteger
+	 * booleanToString
+	 * 
+	 * dateToString
+	 * 
+	 * doubleToBigDecimal
+	 * doubleToString
+	 * 
+	 * integerToBigDecimal
+	 * integerToBoolean
+	 * integerToLong
+	 * integerToString
+	 * 
+	 * longToInteger
+	 * longToString
+	 * 
+	 * stringToBoolean
+	 * stringToDate
+	 * stringToDouble
+	 * stringToInteger
+	 * stringToLong
+	 */
     // Init ---------------------------------------------------------------------------------------
     private static final Map<String, Method> CONVERTERS = new HashMap<String, Method>();
 
@@ -336,4 +367,26 @@ public final class ObjectConverter {
         
     	return Long.valueOf(value);
     }
+ 
+    /*
+     * Converts Integer to BigInteger.
+     * @param value The Integer to be converted.
+     * @return The converted BigInteger value.
+     */
+    public static BigInteger integerToBigInteger(Integer value) {
+        
+    	return BigInteger.valueOf(value.intValue());
+    }
+
+    /*
+     * Converts BigInteger to Integer.
+     * @param value The BigInteger to be converted.
+     * @return The converted Integer value.
+     */
+    public static Integer bigIntegerToInteger(BigInteger value) {
+        
+    	return new Integer(value.intValue());
+    }
+
+
 }

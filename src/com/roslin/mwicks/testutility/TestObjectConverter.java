@@ -1,7 +1,10 @@
 package com.roslin.mwicks.testutility;
 
 import java.math.BigDecimal;
+import java.math.BigInteger;
+
 import java.text.SimpleDateFormat;
+
 import java.util.Date;
 
 import com.roslin.mwicks.utility.ObjectConverter;
@@ -17,75 +20,40 @@ public class TestObjectConverter {
             /*
              * 1.  integerToBoolean
              * 2.  booleanToInteger
+             * 
              * 3.  doubleToBigDecimal
              * 4.  bigDecimalToDouble
+             * 
              * 5.  integerToString
              * 6.  stringToInteger
+             * 
              * 7.  booleanToString
              * 8.  stringToBoolean
+             * 
              * 9.  longToString
              * 10. stringToLong
+             * 
              * 11. longToInteger
              * 12. integerToLong
+             * 
              * 13. doubleToString
              * 14. stringToDouble
+             * 
              * 15. dateToString
              * 16. stringToDate
+             * 
+             * 17. integerToBigDecimal
+             * 18. bigDecimalToInteger
              */
 
+    		System.out.println("");
+            		
             //Object o1 = new Integer(0);
             int o1_integer = 0;
     		
             //Object o2 = Boolean.TRUE;
             boolean o2_boolean = true;
-            
-    		//Object o3 = new Double(100.99);
-            double o3_double = 100.99;
-            
-    		//Object o4 = new BigDecimal(123);
-            BigDecimal o4_bigdecimal = new BigDecimal(123);
-            
-    		//Object o5 = new Integer(456);
-            int o5_integer = 456;
-            
-    		//Object o6 = "789";
-            String o6_string = "789";
-            
-    		//Object o7 = Boolean.FALSE;
-            boolean o7_boolean = false;
-            
-    		//Object o8 = "0";
-            String o8_string = "true";
-            
-            //long o9_long = new Long(2000);
-            long o9_long = 2000;
-            
-    		//Object o10 = "3000";
-            String o10_string = "3000";
-            
-    		//Object o11 = new Long(2000);
-            long o11_long = 2000;
-            
-    		//Object o12 = new Integer(4000);
-            int o12_integer = 4000;
 
-            //double o13_double = new Double(-3.141);
-            double o13_double = -3.141;
-            
-    		//Object o14 = "-3.333";
-            String o14_string = "-3.333";
-
-            //Date o15_date = format.parse("29-02-2012 12:00:55");
-        	String formatString = "yyyy-MM-dd HH:mm:ss";
-        	SimpleDateFormat format = new SimpleDateFormat(formatString);
-            String dateString = "2012-02-29 12:00:55";
-            Date o15_date = format.parse(dateString);
-            
-    		//Object o16_string = "2012-02-29 12:00:55";
-            String o16_string = "2012-02-29 12:00:55";
-
-    		System.out.println("");
-            		
             // 1.  integerToBoolean
     		System.out.println("1.  integerToBoolean");
     		System.out.println("Integer = " + o1_integer);
@@ -100,6 +68,13 @@ public class TestObjectConverter {
     		System.out.println("Integer = " + i1);
     		System.out.println("");
 
+    		
+    		//Object o3 = new Double(100.99);
+            double o3_double = 100.99;
+            
+    		//Object o4 = new BigDecimal(123);
+            BigDecimal o4_bigdecimal = new BigDecimal(123);
+            
             // 3.  doubleToBigDecimal
     		System.out.println("3.  doubleToBigDecimal");
     		System.out.println("Double     = " + o3_double);
@@ -115,6 +90,13 @@ public class TestObjectConverter {
     		System.out.println("Double     = " + d1);
     		System.out.println("");
     		
+    		
+    		//Object o5 = new Integer(456);
+            int o5_integer = 456;
+            
+    		//Object o6 = "789";
+            String o6_string = "789";
+            
     		// 5.  integerToString
     		System.out.println("5.  integerToString");
     		System.out.println("Integer = " + o5_integer);
@@ -129,6 +111,13 @@ public class TestObjectConverter {
     		System.out.println("Integer = " + i2);
     		System.out.println("");
     		
+    		
+    		//Object o7 = Boolean.FALSE;
+            boolean o7_boolean = false;
+            
+    		//Object o8 = "0";
+            String o8_string = "true";
+            
             // 7.  booleanToString
     		System.out.println("7.  booleanToString");
     		System.out.println("Boolean = " + o7_boolean);
@@ -143,6 +132,13 @@ public class TestObjectConverter {
     		System.out.println("Boolean = " + b2);
     		System.out.println("");
     		
+
+    		//long o9_long = new Long(2000);
+            long o9_long = 2000;
+            
+    		//Object o10 = "3000";
+            String o10_string = "3000";
+            
             // 9.  longToString
     		System.out.println("9.  longToString");
     		System.out.println("Long   = " + o9_long);
@@ -156,6 +152,13 @@ public class TestObjectConverter {
     		long l1 = ObjectConverter.convert(o10_string, Long.class);
     		System.out.println("Long   = " + l1);
     		System.out.println("");
+
+    		
+    		//Object o11 = new Long(2000);
+            long o11_long = 2000;
+            
+    		//Object o12 = new Integer(4000);
+            int o12_integer = 4000;
 
     		// 11. longToInteger
     		System.out.println("11. longToInteger");
@@ -171,6 +174,13 @@ public class TestObjectConverter {
     		System.out.println("Long    = " + l2);
     		System.out.println("");
 
+            
+    		//double o13_double = new Double(-3.141);
+            double o13_double = -3.141;
+            
+    		//Object o14 = "-3.333";
+            String o14_string = "-3.333";
+
             // 13.  doubleToString
     		System.out.println("13.  doubleToString");
     		System.out.println("Double = " + o13_double);
@@ -185,6 +195,16 @@ public class TestObjectConverter {
     		System.out.println("Double = " + d2);
     		System.out.println("");
 
+            
+    		//Date o15_date = format.parse("29-02-2012 12:00:55");
+        	String formatString = "yyyy-MM-dd HH:mm:ss";
+        	SimpleDateFormat format = new SimpleDateFormat(formatString);
+            String dateString = "2012-02-29 12:00:55";
+            Date o15_date = format.parse(dateString);
+            
+    		//Object o16_string = "2012-02-29 12:00:55";
+            String o16_string = "2012-02-29 12:00:55";
+
             // 15.  dateToString
     		System.out.println("15.  dateToString");
     		System.out.println("Date   = " + o15_date);
@@ -198,6 +218,28 @@ public class TestObjectConverter {
     		Date date1 = ObjectConverter.convert(o16_string, Date.class);
     		System.out.println("Date   = " + date1);
     		System.out.println("");
+    		
+    		
+    		//Object o17 = new Integer(456);
+            int o17_integer = 456;
+            
+    		//Object o18 = new BigInteger(123);
+            BigInteger o18_biginteger = new BigInteger(String.valueOf(123));
+            
+            // 17.  integerToBigInteger
+    		System.out.println("17. integerToBigInteger");
+    		System.out.println("Integer    = " + o17_integer);
+    		BigInteger bi1 = ObjectConverter.convert(o17_integer, BigInteger.class);
+    		System.out.println("BigInteger = " + bi1);
+    		System.out.println("");
+    		
+            // 18.  bigIntegerToInteger
+    		System.out.println("18.  bigIntegerToInteger");
+    		System.out.println("BigInteger = " + o18_biginteger);
+    		int i4 = ObjectConverter.convert(o18_biginteger, Integer.class);
+    		System.out.println("Integer    = " + i4);
+    		System.out.println("");
+
 
             Wrapper.printEpilogue("*", Wrapper.getExecutingClass(), startTime);
     	}

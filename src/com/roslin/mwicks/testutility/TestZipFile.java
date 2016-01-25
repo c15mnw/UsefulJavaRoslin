@@ -16,16 +16,16 @@ public class TestZipFile {
 
                 if ( FileUtil.isZipFileValid( file1 ) ) {
                 	
-                    //System.out.println(file1 + " is a VALID Zipfile!");
+                    System.out.println(file1 + " is a VALID Zipfile!");
                 }
                 else {
                 	
-                    //System.out.println(file1 + " is an INVALID Zipfile!");
+                    System.out.println(file1 + " is an INVALID Zipfile!");
                 }
             }
             else {
             	
-                //System.out.println("No arguments supplies to this program!");
+                System.out.println("No arguments supplies to this program!");
             }
     	}
     	catch (Exception e) {

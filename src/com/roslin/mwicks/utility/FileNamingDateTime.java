@@ -36,17 +36,20 @@ import java.util.Date;
 
 public class FileNamingDateTime{  
 
+    // Constants ----------------------------------------------------------------------------------
+	protected static final String FILE_NAME_FORMAT = "yyyy-MM-dd_HH-mm-ss";
+
     public static String now() {
 	    
     	Date dt = new Date();
-    	SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss");
+    	SimpleDateFormat sdf = new SimpleDateFormat(FILE_NAME_FORMAT);
     	
     	return sdf.format(dt);
 	}
 
     public static String formatDate(Date dt) {
 	    
-    	SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss");
+    	SimpleDateFormat sdf = new SimpleDateFormat(FILE_NAME_FORMAT);
     	
     	return sdf.format(dt);
 	}
