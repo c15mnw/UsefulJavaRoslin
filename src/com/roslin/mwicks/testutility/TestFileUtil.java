@@ -18,7 +18,7 @@ public class TestFileUtil {
     	try {
     		long startTime = Wrapper.printPrologue("*", Wrapper.getExecutingClass());
 
-
+    		/*
     		//String directory = "/Users/gwentoulin/Downloads/Roslin/4_submission_folder";
     		String directory = "/Users/gwentoulin/Downloads/Roslin/test";
     		
@@ -201,6 +201,7 @@ public class TestFileUtil {
             	}
 
         	}
+    		 */
 
 
             //File file1 = new File("/Users/gwentoulin/Desktop/output.txt");
@@ -260,18 +261,27 @@ public class TestFileUtil {
         		String str2 = iterator2.next();
                 //System.out.println("file2, Record " + i2 + " : " + str2);
         	}
+        	*/
+
+            File file3 = new File("/Users/mwicks23/Desktop/ensembl_gene_names.csv");
 
             List<String> fileList3 = FileUtil.readRecords(file3);
         	Iterator<String> iterator3 = fileList3.iterator();
         	int i3 = 0;
+        	int matched = 0;
 
         	while (iterator3.hasNext()) {
         		
         		i3++;
         		String str3 = iterator3.next();
-                //System.out.println("file3, Record " + i3 + " : " + str3);
+        		if ( str3.endsWith("117") ) {
+        			matched++;
+                    System.out.println("file3, " + matched + ", Record " + i3 + " : " + str3);
+        		}
+        		if ( matched > 9) {
+        			break;
+        		}
         	}
-        	*/
 
             Wrapper.printEpilogue("*", Wrapper.getExecutingClass(), startTime);
     	}

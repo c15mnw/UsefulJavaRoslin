@@ -79,7 +79,7 @@ public class GenerateRandomStuff {
     	"Major 7th",
     	"Dominant 7th",
     	"Minor 7th",
-    	"Minor 7th \u266D 5th"};
+    	"Minor 7th, \u266D5th"};
 
     private static String [] validFrets = new String[] 
        	{"1",
@@ -103,7 +103,7 @@ public class GenerateRandomStuff {
     	int indexNotes = GenerateRandom.getRandom(0, 11);
     	int indexModes = GenerateRandom.getRandom(0, 6);
     	
-    	String chord = validNotes[indexNotes] + " " + validModes[indexModes] + " (Over " + validNotes[indexNotes] + " " + validChords[indexModes] + ")"; 
+    	String chord = validNotes[indexNotes] + " " + validModes[indexModes] + ", Over " + validNotes[indexNotes] + " " + validChords[indexModes]; 
     	
     	return chord;
 	}
@@ -114,7 +114,7 @@ public class GenerateRandomStuff {
     	int indexKeys = GenerateRandom.getRandom(0, 1);
     	int indexShapes = GenerateRandom.getRandom(0, 4);
     	
-    	String pentatonic = validNotes[indexNotes] + " " + validKeys[indexKeys] + " " + validShapes[indexShapes]; 
+    	String pentatonic = validNotes[indexNotes] + " " + validKeys[indexKeys] + " Pentatonic, " + validShapes[indexShapes]; 
     	
     	return pentatonic;
 	}

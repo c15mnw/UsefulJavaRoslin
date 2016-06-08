@@ -8,6 +8,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import com.roslin.mwicks.utility.ObjectConverter;
+import com.roslin.mwicks.utility.StringUtility;
 import com.roslin.mwicks.utility.Wrapper;
 
 public class TestObjectConverter {
@@ -95,8 +96,15 @@ public class TestObjectConverter {
             int o5_integer = 456;
             
     		//Object o6 = "789";
-            String o6_string = "789";
-            
+            //String o6_string = "789";
+            String o6_string = "";
+        	if ( StringUtility.isItNumeric(o6_string) ){
+        		System.out.println("Its a String");
+        	}
+        	else {
+        		System.out.println("Its NOT a String");
+        	}
+
     		// 5.  integerToString
     		System.out.println("5.  integerToString");
     		System.out.println("Integer = " + o5_integer);
@@ -107,8 +115,8 @@ public class TestObjectConverter {
             // 6.  stringToInteger
     		System.out.println("6.  stringToInteger");
     		System.out.println("String  = " + o6_string);
-    		int i2 = ObjectConverter.convert(o6_string, Integer.class);
-    		System.out.println("Integer = " + i2);
+    		//int i2 = ObjectConverter.convert(o6_string, Integer.class);
+    		//System.out.println("Integer = " + i2);
     		System.out.println("");
     		
     		
