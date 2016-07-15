@@ -37,6 +37,7 @@ public class TestPad {
             int intX = 12345;
             System.out.println("StringUtility.pad(intX, 7, padChar):" + StringUtility.pad(intX, 7, padChar));
 
+            
             Wrapper.printEpilogue("*", Wrapper.getExecutingClass(), startTime);
     	}
     	catch (Exception e) {
