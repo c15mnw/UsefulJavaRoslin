@@ -1,5 +1,6 @@
 package com.roslin.mwicks.testutility;
 
+import com.roslin.mwicks.utility.ObjectConverter;
 import com.roslin.mwicks.utility.StringUtility;
 import com.roslin.mwicks.utility.Wrapper;
 
@@ -27,6 +28,15 @@ public class TestString {
         		    else if ( StringUtility.isItNumeric(testString) ) {
         		    	
         		    	System.out.println(testString + " is a VALID Number.");  
+        		    } 
+        		    else if ( StringUtility.isItNumberFormat(testString) ) {
+        		    	
+        		    	System.out.println(testString + " is a VALID Decimal Number with Commas and an Optional Leading Sign.");  
+        		    	
+        		    	System.out.println("StringUtility.getIntegerStringFromFormatted( testString ) = " + StringUtility.getIntegerStringFromFormatted( testString ) );
+        		    	
+        		    	System.out.println("StringUtility.getFormattedFromIntegerString( StringUtility.getIntegerStringFromFormatted( testString ) ) = " + 
+        		    	    StringUtility.getFormattedFromIntegerString( StringUtility.getIntegerStringFromFormatted( testString ) ));
         		    } 
         		    else if ( StringUtility.isItNumericWithLeadingSignAndDecimalPoint(testString) ) {
         		    	

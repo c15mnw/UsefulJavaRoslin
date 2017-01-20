@@ -39,6 +39,10 @@ import java.io.Reader;
 import java.io.StringWriter;
 import java.io.Writer;
 
+import java.text.NumberFormat;
+import java.text.ParseException;
+
+import java.util.Locale;
 import java.util.Stack;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -231,6 +235,66 @@ public class StringUtility{
         }
         
         return isValid;  
+    }  
+
+	public static boolean isItNumericWithLeadingSignAndDecimalPointAndCommas(String number){
+
+		boolean isValid = false;
+		
+        String expression = "^[+-]?[0-9]{1,}(?:[0-9]*(?:[.,][0-9]{1})?|(?:,[0-9]{3})*(?:\\.[0-9]{1,2})?|(?:\\.[0-9]{3})*(?:,[0-9]{1,2})?)$";  
+        CharSequence inputStr = number;  
+           
+        Pattern pattern = Pattern.compile(expression);  
+        Matcher matcher = pattern.matcher(inputStr);  
+        
+        if ( matcher.matches() ) {  
+            
+        	isValid = true;  
+        }
+        
+        return isValid;  
+    }  
+
+	public static boolean isItNumberFormat(String number) {
+
+		boolean isValid = false;
+		
+		NumberFormat nf = NumberFormat.getInstance(Locale.UK);
+
+        try {
+			if ( nf.parse( number ) != null ) {  
+			    
+				isValid = true;  
+			}
+		} 
+        catch (ParseException e) {
+
+        	isValid = false;  
+		}
+        
+        return isValid;  
+    }  
+
+	public static String getIntegerStringFromFormatted(String number) {
+		
+		NumberFormat nf = NumberFormat.getInstance(Locale.UK);
+
+        try {
+			
+        	return nf.parse(number).toString();
+		} 
+        catch (ParseException e) {
+			
+        	return "PARSE ERROR";
+		}
+    }  
+
+	public static String getFormattedFromIntegerString(String number) {
+		
+		NumberFormat nf = NumberFormat.getInstance(Locale.UK);
+		nf.setMaximumFractionDigits(2);
+		
+        return nf.format( ObjectConverter.convert( number, Integer.class) );
     }  
 
 	public static boolean isItExponentialNumeric(String number){
