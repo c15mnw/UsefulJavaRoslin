@@ -65,6 +65,7 @@ public final class DateUtil {
  	@SuppressWarnings("serial")
 	private static final Map<String, String> DATE_FORMAT_REGEXPS = new HashMap<String, String>() {{
         put("^\\d{8}$", "yyyyMMdd");
+        put("^\\d{1,2}/\\d{1,2}/\\d{4}$", "dd/MM/yyyy");
         put("^\\d{1,2}-\\d{1,2}-\\d{4}$", "dd-MM-yyyy");
         put("^\\d{4}-\\d{1,2}-\\d{1,2}$", "yyyy-MM-dd");
         put("^\\d{1,2}/\\d{1,2}/\\d{4}$", "MM/dd/yyyy");
@@ -218,6 +219,8 @@ public final class DateUtil {
     	
         for (String regexp : DATE_FORMAT_REGEXPS.keySet()) {
         	
+        	System.out.println("regexp : " + regexp);
+        	
             if (dateString.toLowerCase().matches(regexp)) {
             	
                 return DATE_FORMAT_REGEXPS.get(regexp);
@@ -228,6 +231,28 @@ public final class DateUtil {
     }
 
     // Changers -----------------------------------------------------------------------------------
+    /*
+     * Add the given amount of years, months, days, hours, minutes, seconds, and millis to the given date. 
+     * It actually converts the date to Calendar
+     * and calls {@link CalendarUtil#addYears(Calendar, int)} and then converts back to date.
+     * @param date The date to add the given amount of years to.
+     * @param years The amount of years to be added to the given date. Negative values are also
+     * allowed, it will just go back in time.
+     */
+    public static Date addYearsMonthsDaysHoursMinutesSecondsMillis(Date date, int years, int months, int days, int hours, int minutes, int seconds, int millis) {
+    	
+        Calendar calendar = toCalendar(date);
+
+        CalendarUtil.addYears(calendar, years);
+        CalendarUtil.addMonths(calendar, months);
+        CalendarUtil.addDays(calendar, days);
+        CalendarUtil.addHours(calendar, hours);
+        CalendarUtil.addMinutes(calendar, minutes);
+        CalendarUtil.addSeconds(calendar, seconds);
+        CalendarUtil.addMillis(calendar, millis);
+        
+        return calendar.getTime();
+    }
     /*
      * Add the given amount of years to the given date. It actually converts the date to Calendar
      * and calls {@link CalendarUtil#addYears(Calendar, int)} and then converts back to date.

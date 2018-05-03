@@ -23,7 +23,7 @@ public class TestDateUtil {
             System.out.println("-------------------");
             
             String dateString1 = "20120229";
-            String dateString2 = "29-02-2012";
+            String dateString2 = "29/02/2012";
             String dateString3 = "2012-02-29";
             String dateString4 = "02/29/2012";
             String dateString5 = "2012/02/29";
@@ -75,7 +75,7 @@ public class TestDateUtil {
             System.out.println("-------------------");
             
             String formatString1 = "yyyyMMdd";
-            String formatString2 = "dd-MM-yyyy";
+            String formatString2 = "dd/MM/yyyy";
             String formatString3 = "yyyy-MM-dd";
             String formatString4 = "MM/dd/yyyy";
             String formatString5 = "yyyy/MM/dd";
@@ -229,8 +229,9 @@ public class TestDateUtil {
             System.out.println("format21.format(parsed3)  = " + format21.format(parsed3));
             System.out.println("format22.format(parsed2)  = " + format22.format(parsed2));
             System.out.println("format23.format(parsed1)  = " + format23.format(parsed1));
-
-
+            /*
+            */
+            
             System.out.println("");
             System.out.println("Parse Date Strings Using DateUtil package");
             System.out.println("-----------------------------------------");
@@ -342,27 +343,35 @@ public class TestDateUtil {
             System.out.println("calendar21.getTime() = " + calendar21.getTime());
             System.out.println("calendar22.getTime() = " + calendar22.getTime());
             System.out.println("calendar23.getTime() = " + calendar23.getTime());
-            
+            /*
+             */
+
             System.out.println("");
             System.out.println("Date Arithmetic using DateUtil package");
             System.out.println("--------------------------------------");
             
-            Date date24 = DateUtil.addYears(date1, 1);
-            Date date25 = DateUtil.addMonths(date2, 1); 
-            Date date26 = DateUtil.addDays(date3, 1); 
-            Date date27 = DateUtil.addHours(date4, 1);
-            Date date28 = DateUtil.addMinutes(date5, 1);
-            Date date29 = DateUtil.addSeconds(date6, 1); 
-            Date date30 = DateUtil.addMillis(date7, 1);
-            
-            System.out.println("date24 = DateUtil.addYears(date1, 1)   = " + date24.toString());
-            System.out.println("date25 = DateUtil.addMonths(date2, 1)  = " + date25.toString());
-            System.out.println("date26 = DateUtil.addDays(date3, 1)    = " + date26.toString());
-            System.out.println("date27 = DateUtil.addHours(date4, 1)   = " + date27.toString());
-            System.out.println("date28 = DateUtil.addMinutes(date5, 1) = " + date28.toString());
-            System.out.println("date29 = DateUtil.addSeconds(date6, 1) = " + date29.toString());
-            System.out.println("date30 = DateUtil.addMillis(date7, 1)  = " + date30.toString());
-            
+            Date date24 = DateUtil.addYears(date1, -1);
+            Date date25 = DateUtil.addMonths(date2, -1); 
+            Date date26 = DateUtil.addDays(date3, -1); 
+            Date date27 = DateUtil.addHours(date4, -1);
+            Date date28 = DateUtil.addMinutes(date5, -1);
+            Date date29 = DateUtil.addSeconds(date6, -1); 
+            Date date30 = DateUtil.addMillis(date7, -1);
+
+            Date date31 = DateUtil.addYearsMonthsDaysHoursMinutesSecondsMillis(date1, 1, 1, 1, 1, 1, 1, 1);
+            Date date32 = DateUtil.addYearsMonthsDaysHoursMinutesSecondsMillis(date1, -1, -1, -1, -1, -1, -1, -1);
+
+            System.out.println("date24 = DateUtil.addYears(date1, -1)   = " + date24.toString());
+            System.out.println("date25 = DateUtil.addMonths(date2, -1)  = " + date25.toString());
+            System.out.println("date26 = DateUtil.addDays(date3, -1)    = " + date26.toString());
+            System.out.println("date27 = DateUtil.addHours(date4, -1)   = " + date27.toString());
+            System.out.println("date28 = DateUtil.addMinutes(date5, -1) = " + date28.toString());
+            System.out.println("date29 = DateUtil.addSeconds(date6, -1) = " + date29.toString());
+            System.out.println("date30 = DateUtil.addMillis(date7, -1)  = " + date30.toString());
+
+            System.out.println("date31 = DateUtil.addYearsMonthsDaysHoursMinutesSecondsMillis(date1, 1, 1, 1, 1, 1, 1, 1)        = " + date31.toString());
+            System.out.println("date32 = DateUtil.addYearsMonthsDaysHoursMinutesSecondsMillis(date1, -1, -1, -1, -1, -1, -1, -1) = " + date32.toString());
+
             System.out.println("");
 
             Calendar calendar24 = DateUtil.toCalendar(date24);
@@ -586,28 +595,30 @@ public class TestDateUtil {
                 System.out.println("calendar11 = " + calendar11.get(Calendar.SECOND));
                 System.out.println("calendar12 = " + calendar12.get(Calendar.SECOND));
             }
+            /*
+             */
 
             System.out.println("");
             System.out.println("More Date Comparisons using DateUtil package");
             System.out.println("--------------------------------------------");
             
-            int i1 = DateUtil.elapsedYears(date1, date2);
-            int i2 = DateUtil.elapsedMonths(date3, date4);
-            int i3 = DateUtil.elapsedDays(date5, date6);
-            int i4 = DateUtil.elapsedHours(date7, date8);
-            int i5 = DateUtil.elapsedMinutes(date9, date10);
-            int i6 = DateUtil.elapsedSeconds(date11, date12);
-            long l1 = DateUtil.elapsedMillis(date13, date14);
-            int[] intArray = DateUtil.elapsedTime(date15, date16);
+            int i1 = DateUtil.elapsedYears(date32,  date31);
+            int i2 = DateUtil.elapsedMonths(date32,  date31);
+            int i3 = DateUtil.elapsedDays(date32,  date31);
+            int i4 = DateUtil.elapsedHours(date32,  date31);
+            int i5 = DateUtil.elapsedMinutes(date32,  date31);
+            int i6 = DateUtil.elapsedSeconds(date32,  date31);
+            long l1 = DateUtil.elapsedMillis(date32,  date31);
+            int[] intArray = DateUtil.elapsedTime(date32,  date31);
 
-            System.out.println("DateUtil.elapsedYears(date1, date2)     = " + i1 + " years");
-            System.out.println("DateUtil.elapsedMonths(date3, date4)    = " + i2 + " months");
-            System.out.println("DateUtil.elapsedDays(date5, date6)      = " + i3 + " days");
-            System.out.println("DateUtil.elapsedHours(date7, date8)     = " + i4 + " hours");
-            System.out.println("DateUtil.elapsedMinutes(date9, date10)  = " + i5 + " minutes");
-            System.out.println("DateUtil.elapsedSeconds(date11, date12) = " + i6 + " seconds");
-            System.out.println("DateUtil.elapsedMillis(date13, date14)  = " + l1 + " milliseconds");
-            
+            System.out.println("DateUtil.elapsedYears(date32,  date31)     = " + i1 + " years");
+            System.out.println("DateUtil.elapsedMonths(date32,  date31)    = " + i2 + " months");
+            System.out.println("DateUtil.elapsedDays(date32,  date31)      = " + i3 + " days");
+            System.out.println("DateUtil.elapsedHours(date32,  date31)     = " + i4 + " hours");
+            System.out.println("DateUtil.elapsedMinutes(date32,  date31)   = " + i5 + " minutes");
+            System.out.println("DateUtil.elapsedSeconds(date32,  date31)   = " + i6 + " seconds");
+            System.out.println("DateUtil.elapsedMillis(date32,  date31)    = " + l1 + " milliseconds");
+
             System.out.println("");
 
             String appendStr = "";
@@ -619,7 +630,7 @@ public class TestDateUtil {
             	if (i == 3) { appendStr = " Hours"; }
             	if (i == 4) { appendStr = " Minutes"; }
             	if (i == 5) { appendStr = " Seconds"; }
-                System.out.println("DateUtil.elapsedTime(date15, date16) = " + intArray[i] + appendStr);
+                System.out.println("DateUtil.elapsedTime(date32,  date31) = " + intArray[i] + appendStr);
             }
             
             System.out.println("");
